@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  price: 9.99
+  carat: 9.99
+  shape: MyString
+  template_id: 1
+
+two:
+  price: 9.99
+  carat: 9.99
+  shape: MyString
+  template_id: 1

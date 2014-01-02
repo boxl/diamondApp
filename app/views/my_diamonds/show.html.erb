@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Price:</strong>
+  <%= @my_diamond.price %>
+</p>
+
+<p>
+  <strong>Carat:</strong>
+  <%= @my_diamond.carat %>
+</p>
+
+<p>
+  <strong>Shape:</strong>
+  <%= @my_diamond.shape %>
+</p>
+
+<p>
+  <strong>Template:</strong>
+  <%= @my_diamond.template_id %>
+</p>
+
+<%= link_to 'Edit', edit_my_diamond_path(@my_diamond) %> |
+<%= link_to 'Back', my_diamonds_path %>

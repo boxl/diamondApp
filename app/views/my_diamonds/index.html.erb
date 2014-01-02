@@ -1,0 +1,33 @@
+<h1>Listing my_diamonds</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Price</th>
+      <th>Carat</th>
+      <th>Shape</th>
+      <th>Template</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @my_diamonds.each do |my_diamond| %>
+      <tr>
+        <td><%= my_diamond.price %></td>
+        <td><%= my_diamond.carat %></td>
+        <td><%= my_diamond.shape %></td>
+        <td><%= my_diamond.template_id %></td>
+        <td><%= link_to 'Show', my_diamond %></td>
+        <td><%= link_to 'Edit', edit_my_diamond_path(my_diamond) %></td>
+        <td><%= link_to 'Destroy', my_diamond, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New My diamond', new_my_diamond_path %>

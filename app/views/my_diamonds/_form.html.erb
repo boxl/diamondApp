@@ -1,0 +1,33 @@
+<%= form_for(@my_diamond) do |f| %>
+  <% if @my_diamond.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@my_diamond.errors.count, "error") %> prohibited this my_diamond from being saved:</h2>
+
+      <ul>
+      <% @my_diamond.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :price %><br>
+    <%= f.text_field :price %>
+  </div>
+  <div class="field">
+    <%= f.label :carat %><br>
+    <%= f.text_field :carat %>
+  </div>
+  <div class="field">
+    <%= f.label :shape %><br>
+    <%= f.text_field :shape %>
+  </div>
+  <div class="field">
+    <%= f.label :template_id %><br>
+    <%= f.number_field :template_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
