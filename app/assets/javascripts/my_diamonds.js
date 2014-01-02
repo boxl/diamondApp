@@ -9,3 +9,4 @@ $(document).ready(function(){
     $('#my_diamond_template_id').val(id);
   })
 })
+
