@@ -1,3 +1,3 @@
 class MyDiamond < ActiveRecord::Base
-  has_many: :templates
+  has_many :templates
 end
