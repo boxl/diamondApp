@@ -1,3 +1,3 @@
 class Template < ActiveRecord::Base
-  belongs_to :my_diamond
+  has_many :my_diamonds
 end
