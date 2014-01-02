@@ -1,0 +1,41 @@
+<h1>Listing templates</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Description</th>
+      <th>Min color</th>
+      <th>Min cut</th>
+      <th>Min clarity</th>
+      <th>Min polish</th>
+      <th>Min symmetry</th>
+      <th>Min flour</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @templates.each do |template| %>
+      <tr>
+        <td><%= template.name %></td>
+        <td><%= template.description %></td>
+        <td><%= template.min_color %></td>
+        <td><%= template.min_cut %></td>
+        <td><%= template.min_clarity %></td>
+        <td><%= template.min_polish %></td>
+        <td><%= template.min_symmetry %></td>
+        <td><%= template.min_flour %></td>
+        <td><%= link_to 'Show', template %></td>
+        <td><%= link_to 'Edit', edit_template_path(template) %></td>
+        <td><%= link_to 'Destroy', template, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Template', new_template_path %>

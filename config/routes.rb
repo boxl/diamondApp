@@ -1,4 +1,6 @@
 DiamondApp::Application.routes.draw do
+  resources :templates
+
   resources :my_diamonds
 
   # The priority is based upon order of creation: first created -> highest priority.
