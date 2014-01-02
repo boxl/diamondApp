@@ -11,13 +11,26 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140102182340) do
+ActiveRecord::Schema.define(version: 20140102191251) do
 
   create_table "my_diamonds", force: true do |t|
     t.decimal  "price",       precision: 14, scale: 2
     t.decimal  "carat",       precision: 8,  scale: 2
     t.string   "shape"
     t.integer  "template_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "templates", force: true do |t|
+    t.string   "name"
+    t.text     "description"
+    t.string   "min_color"
+    t.string   "min_cut"
+    t.string   "min_clarity"
+    t.string   "min_polish"
+    t.string   "min_symmetry"
+    t.string   "min_flour"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

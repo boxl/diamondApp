@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @template.name %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @template.description %>
+</p>
+
+<p>
+  <strong>Min color:</strong>
+  <%= @template.min_color %>
+</p>
+
+<p>
+  <strong>Min cut:</strong>
+  <%= @template.min_cut %>
+</p>
+
+<p>
+  <strong>Min clarity:</strong>
+  <%= @template.min_clarity %>
+</p>
+
+<p>
+  <strong>Min polish:</strong>
+  <%= @template.min_polish %>
+</p>
+
+<p>
+  <strong>Min symmetry:</strong>
+  <%= @template.min_symmetry %>
+</p>
+
+<p>
+  <strong>Min flour:</strong>
+  <%= @template.min_flour %>
+</p>
+
+<%= link_to 'Edit', edit_template_path(@template) %> |
+<%= link_to 'Back', templates_path %>
