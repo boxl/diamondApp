@@ -31,3 +31,10 @@
     <%= f.submit %>
   </div>
 <% end %>
+<div>
+  <ul>
+      <% @templates.each do |template| %>
+        <li><a class="templateInput" href="#" data-id = "<%=template.id%>"><%= template.name %>, <%= template.description %></a></li>
+      <% end %>
+  </ul>
+</div>

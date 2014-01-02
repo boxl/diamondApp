@@ -15,6 +15,8 @@ class MyDiamondsController < ApplicationController
   # GET /my_diamonds/new
   def new
     @my_diamond = MyDiamond.new
+    @templates = Template.all
+    gon.template = @templates
   end
 
   # GET /my_diamonds/1/edit
