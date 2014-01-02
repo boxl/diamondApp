@@ -14,8 +14,8 @@
 ActiveRecord::Schema.define(version: 20140102182340) do
 
   create_table "my_diamonds", force: true do |t|
-    t.decimal  "price"
-    t.decimal  "carat"
+    t.decimal  "price",       precision: 14, scale: 2
+    t.decimal  "carat",       precision: 8,  scale: 2
     t.string   "shape"
     t.integer  "template_id"
     t.datetime "created_at"
