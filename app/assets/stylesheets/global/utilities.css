@@ -1,0 +1,54 @@
+/*
+ * Misc reusable utility classes, needed more or less everywhere.
+ */
+
+/* -------------------------| Clearfix |------------------------------------ */
+
+/* This css class fixes the issue where an element does not enclose children
+ * that are floated. In non-IE browsers, we append a clearing element using the
+ * :after pseudo-class. In IE, which does not support the :after pseudo class,
+ * we add a css property that triggers the hasLayout property, which forces the
+ * container to contain the floated children. It should also be noted that the
+ * 'content' property needs to be an actual character, and not a space,
+ * otherwise double margins will occur in FF.
+ */
+
+/* Works for all non-IE browsers. */
+.clearfix:after {
+  clear: both;
+  content: ".";
+  display: block;
+  font-size: 0;
+  height: 0;
+  line-height: 0;
+  visibility: hidden;
+}
+
+.clearfix {
+  zoom: 1;
+}
+
+/* -------------------------| Word Wrap |----------------------------------- */
+
+/* Safari won't do word break in a table without a nested div with a fixed
+ * width. firefox does not understand break-word at all yet, though it is
+ * standard css3. */
+.datawrap { word-wrap: break-word; }
+
+/* Used in conjunction with the wbr tag, this will cause line breaks in safari
+ * wherever the wbr tag would cause breaks in FF and IE. */
+.word_break {
+  display: inline-block;
+}
+
+/* -------------------------| Text Overflow |------------------------------- */
+
+
+
+/* This class will only work on elements that are display: block or
+ * display: inline-block. */
+.ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
